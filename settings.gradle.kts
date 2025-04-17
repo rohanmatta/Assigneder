@@ -21,5 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Assigneder"
 include(":app")
-include(":app")
  

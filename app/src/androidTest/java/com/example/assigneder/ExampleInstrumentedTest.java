@@ -1,4 +1,4 @@
-package com.example.assignder;
+package com.example.assigneder;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.assignder", appContext.getPackageName());
+        assertEquals("com.example.assigneder", appContext.getPackageName());
     }
 }

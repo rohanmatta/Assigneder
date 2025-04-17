@@ -1,4 +1,4 @@
-package com.example.assignder;
+package com.example.assigneder;
 
 import org.junit.Test;
 
