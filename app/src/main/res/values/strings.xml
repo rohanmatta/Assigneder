@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Assigneder</string>
+    <string name="add_assignment">Add Assignment</string>
+
+    <!--Add assignment page-->
+    <string name="assignment_header">Add an Assignment</string>
+    <string name="title_field">Title:</string>
+    <string name="class_field">Class:</string>
+    <string name="due_field">Due Date:</string>
+    <string name="description_field">Description:</string>
+
+    <string name="title_text">Title</string>
+    <string name="class_text">Class</string>
+    <string name="month_text">MM</string>
+    <string name="day_text">DD</string>
+    <string name="year_text">YYYY</string>
+    <string name="description_text">Description</string>
 </resources>
