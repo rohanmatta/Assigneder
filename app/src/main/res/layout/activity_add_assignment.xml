@@ -11,7 +11,7 @@
         android:id="@+id/add_assignment_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="150dp"
         android:text="@string/assignment_header"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +26,7 @@
         android:layout_marginEnd="32dp"
         android:text="@string/title_field"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintEnd_toStartOf="@+id/editTextText"
+        app:layout_constraintEnd_toStartOf="@+id/assignment_title"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,9 +63,9 @@
         app:layout_constraintTop_toBottomOf="@+id/due_text" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/assignment_title"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:ems="8"
         android:inputType="text"
         android:text="@string/title_text"
@@ -77,18 +77,18 @@
     <Spinner
         android:id="@+id/spinner_classes"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/editTextText"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toStartOf="@+id/assignment_title"
         app:layout_constraintTop_toTopOf="@+id/class_text" />
 
     <EditText
         android:id="@+id/editTextTextMultiLine"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="96dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        app:layout_constraintStart_toStartOf="@+id/editTextDate"
+        app:layout_constraintStart_toStartOf="@+id/due_date_field"
         app:layout_constraintTop_toTopOf="@+id/desc_text" />
 
     <Button
@@ -96,17 +96,30 @@
         style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:text="@string/add_assignment"
+        android:layout_marginBottom="64dp"
+        android:text="@string/add_assignment_menu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/button_cancel" />
+
+    <Button
+        android:id="@+id/button_cancel"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:text="@string/cancel_button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_add_assignment"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/due_date_field"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:ems="10"
         android:inputType="date"
         app:layout_constraintStart_toStartOf="@+id/spinner_classes"
