@@ -88,8 +88,40 @@
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        app:layout_constraintStart_toStartOf="@+id/due_date_field"
+        app:layout_constraintStart_toStartOf="@+id/due_day"
         app:layout_constraintTop_toTopOf="@+id/desc_text" />
+
+    <EditText
+        android:id="@+id/due_day"
+        android:layout_width="52dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/day_field"
+        app:layout_constraintStart_toStartOf="@+id/spinner_classes"
+        app:layout_constraintTop_toTopOf="@+id/due_text" />
+
+    <EditText
+        android:id="@+id/due_month"
+        android:layout_width="52dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/month_field"
+        app:layout_constraintStart_toEndOf="@+id/due_day"
+        app:layout_constraintTop_toTopOf="@+id/due_day" />
+
+    <EditText
+        android:id="@+id/due_year"
+        android:layout_width="96dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/year_field"
+        app:layout_constraintStart_toEndOf="@+id/due_month"
+        app:layout_constraintTop_toTopOf="@+id/due_month" />
 
     <Button
         android:id="@+id/button_add_assignment"
@@ -115,14 +147,5 @@
         app:layout_constraintEnd_toStartOf="@+id/button_add_assignment"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/due_date_field"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:inputType="date"
-        app:layout_constraintStart_toStartOf="@+id/spinner_classes"
-        app:layout_constraintTop_toTopOf="@+id/due_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

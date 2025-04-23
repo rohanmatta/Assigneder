@@ -3,12 +3,13 @@ package com.example.assigneder;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Switch;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
-public class SettingsActivity extends AppCompatActivity {
+public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +22,8 @@ public class SettingsActivity extends AppCompatActivity {
         }
 
         // Dark Mode switch
-        Switch darkSwitch = findViewById(R.id.switch_dark_mode);
+        Switch darkSwitch;
+        darkSwitch = findViewById(R.id.switch_dark_mode);
         darkSwitch.setChecked(
                 AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES
         );
@@ -42,6 +44,15 @@ public class SettingsActivity extends AppCompatActivity {
         findViewById(R.id.row_change_name).setOnClickListener(v -> {
             // TODO: implement a dialog to let the user enter a new name
         });
+    }
+
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+
+        if(id == R.id.button_cancel){
+            finish();
+        }
     }
 
     @Override

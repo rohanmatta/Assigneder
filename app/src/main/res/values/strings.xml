@@ -9,6 +9,9 @@
     <string name="class_field">Class:</string>
     <string name="due_field">Due Date:</string>
     <string name="description_field">Description:</string>
+    <string name="month_field">MM</string>
+    <string name="day_field">DD</string>
+    <string name="year_field">YYYY</string>
 
     <string name="title_text">Title</string>
     <string name="class_text">Class</string>
@@ -26,4 +29,6 @@
     <string name="change_name">Change name</string>
     <string name="class_settings">Class Settings</string>
     <string name="dark_mode">Dark Mode</string>
+    <string name="about">About</string>
+    <string name="back_button">Exit</string>
 </resources>

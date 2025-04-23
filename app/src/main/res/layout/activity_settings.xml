@@ -10,16 +10,23 @@
         android:layout_height="wrap_content">
 
         <!-- Change Name row -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
         <TextView
             android:id="@+id/row_change_name"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:gravity="center_vertical"
-            android:clickable="true"
             android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
-            android:text="Change name" />
+            android:text="@string/change_name" />
 
         <View
             android:layout_width="match_parent"
@@ -31,12 +38,13 @@
             android:id="@+id/row_class_settings"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:gravity="center_vertical"
-            android:clickable="true"
             android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
-            android:text="Class Settings" />
+            android:text="@string/class_settings" />
 
         <View
             android:layout_width="match_parent"
@@ -44,6 +52,7 @@
             android:background="?android:attr/listDivider" />
 
         <!-- Dark Mode toggle row -->
+
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -54,16 +63,43 @@
 
             <TextView
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="Dark Mode" />
+                android:text="@string/dark_mode" />
 
             <Switch
                 android:id="@+id/switch_dark_mode"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/row_about"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/about" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/back_button" />
 
     </LinearLayout>
 </ScrollView>
