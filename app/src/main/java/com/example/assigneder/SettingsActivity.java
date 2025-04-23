@@ -22,7 +22,6 @@ public class SettingsActivity extends AppCompatActivity {
 
         // Dark Mode switch
         Switch darkSwitch = findViewById(R.id.switch_dark_mode);
-        // Initialize switch position based on current mode
         darkSwitch.setChecked(
                 AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES
         );
@@ -34,9 +33,9 @@ public class SettingsActivity extends AppCompatActivity {
             );
         });
 
-        // “Class Settings” row tap → launch ClassSettingsActivity
+        // “Class Settings” row tap → launch your AddAssignment activity
         findViewById(R.id.row_class_settings).setOnClickListener(v ->
-                startActivity(new Intent(this, ClassSettingsActivity.class))
+                startActivity(new Intent(this, AddAssignment.class))
         );
 
         // “Change name” row tap → TODO: show rename dialog
@@ -47,7 +46,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle Up button
+        // Handle the Up arrow
         if (item.getItemId() == android.R.id.home) {
             finish();
             return true;

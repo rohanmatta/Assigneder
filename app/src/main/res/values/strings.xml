@@ -3,7 +3,7 @@
     <string name="add_assignment_menu">Add Assignment</string>
     <string name="settings_menu">Settings</string>
 
-    <!--Add assignment page-->
+    <!-- Add assignment page -->
     <string name="assignment_header">Add an Assignment</string>
     <string name="title_field">Title:</string>
     <string name="class_field">Class:</string>
@@ -17,8 +17,13 @@
     <string name="add_assignment_button_text">Add</string>
     <string name="cancel_button_text">Cancel</string>
 
-    <!--Array of Classes to be added to-->
+    <!-- Array of Classes to be added to -->
     <string-array name="classes">
         <item>HCDD 340</item>
     </string-array>
+
+    <!-- Settings screen -->
+    <string name="change_name">Change name</string>
+    <string name="class_settings">Class Settings</string>
+    <string name="dark_mode">Dark Mode</string>
 </resources>

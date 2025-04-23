@@ -9,15 +9,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!-- Change Name -->
+        <!-- Change Name row -->
         <TextView
             android:id="@+id/row_change_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
             android:clickable="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:paddingVertical="12dp"
-            android:textAppearance="?attr/textAppearanceListItem"
+            android:background="?android:attr/selectableItemBackground"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
             android:text="Change name" />
 
         <View
@@ -25,15 +26,16 @@
             android:layout_height="1dp"
             android:background="?android:attr/listDivider" />
 
-        <!-- Class Settings -->
+        <!-- Class Settings row -->
         <TextView
             android:id="@+id/row_class_settings"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
             android:clickable="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:paddingVertical="12dp"
-            android:textAppearance="?attr/textAppearanceListItem"
+            android:background="?android:attr/selectableItemBackground"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
             android:text="Class Settings" />
 
         <View
@@ -41,27 +43,26 @@
             android:layout_height="1dp"
             android:background="?android:attr/listDivider" />
 
-        <!-- (Add more rows like About, Help here following the same pattern) -->
-
-        <!-- Dark Mode Toggle -->
+        <!-- Dark Mode toggle row -->
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="12dp"
-            android:gravity="center_vertical">
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="Dark Mode"
-                android:textAppearance="?attr/textAppearanceListItem" />
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Dark Mode" />
 
             <Switch
                 android:id="@+id/switch_dark_mode"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"/>
         </LinearLayout>
 
     </LinearLayout>
