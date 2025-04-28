@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Switch;
+import android.widget.TextView;
+
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -15,53 +18,31 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        // Show the “Up” button on the toolbar
-        ActionBar bar = getSupportActionBar();
-        if (bar != null) {
-            bar.setDisplayHomeAsUpEnabled(true);
-        }
+        TextView changeName = findViewById(R.id.row_change_name);
+        changeName.setOnClickListener(this);
 
-        // Dark Mode switch
-        Switch darkSwitch;
-        darkSwitch = findViewById(R.id.switch_dark_mode);
-        darkSwitch.setChecked(
-                AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES
-        );
-        darkSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            AppCompatDelegate.setDefaultNightMode(
-                    isChecked
-                            ? AppCompatDelegate.MODE_NIGHT_YES
-                            : AppCompatDelegate.MODE_NIGHT_NO
-            );
-        });
+        TextView classSettings = findViewById(R.id.row_class_settings);
+        classSettings.setOnClickListener(this);
 
-        // “Class Settings” row tap → launch your AddAssignment activity
-        findViewById(R.id.row_class_settings).setOnClickListener(v ->
-                startActivity(new Intent(this, AddAssignment.class))
-        );
+        TextView about = findViewById(R.id.row_about);
+        about.setOnClickListener(this);
 
-        // “Change name” row tap → TODO: show rename dialog
-        findViewById(R.id.row_change_name).setOnClickListener(v -> {
-            // TODO: implement a dialog to let the user enter a new name
-        });
+        Button backButton = findViewById(R.id.back_button);
+        backButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         int id = v.getId();
 
-        if(id == R.id.button_cancel){
+        if(id == R.id.back_button){
+            finish();
+        }else if(id == R.id.row_change_name){
+            finish();
+        }else if(id == R.id.row_class_settings){
+            finish();
+        } else if(id == R.id.row_about) {
             finish();
         }
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle the Up arrow
-        if (item.getItemId() == android.R.id.home) {
-            finish();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 }

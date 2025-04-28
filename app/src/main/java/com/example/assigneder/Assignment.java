@@ -6,23 +6,24 @@ import java.time.LocalDate;
 
 public class Assignment implements Comparable<Assignment> {
     private String title;
-    private String course;
+    private Course course;
     private LocalDate dueDate;
     private String description;
     private int hierarchyStatus;
 
-    public Assignment(String title, String course, LocalDate due_date, String description){
+    public Assignment(String title, Course course, LocalDate due_date, String description){
         this.title = title;
         this.course = course;
         this.dueDate = due_date;
         this.description = description;
+        this.hierarchyStatus = course.getHierarchy();
     }
 
     public String getTitle() {
         return title;
     }
 
-    public String getCourse() {
+    public Course getCourse() {
         return course;
     }
 
@@ -32,10 +33,6 @@ public class Assignment implements Comparable<Assignment> {
 
     public String getDescription() {
         return description;
-    }
-
-    public void setHierarchyStatus(int status){
-        this.hierarchyStatus = status;
     }
 
     @Override

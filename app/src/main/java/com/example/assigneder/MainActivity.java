@@ -29,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
             Intent aboutIntent = new Intent(this, AddAssignment.class);
             startActivity(aboutIntent);
             return true;
+        } else if(menuId == R.id.menu_settings){
+            Intent aboutIntent = new Intent(this, SettingsActivity.class);
+            startActivity(aboutIntent);
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
