@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">Assigneder</string>
+
+    <!-- Menus -->
     <string name="add_assignment_menu">Add Assignment</string>
     <string name="settings_menu">Settings</string>
+    <string name="back_menu">Back</string>
 
     <!-- Add assignment page -->
     <string name="assignment_header">Add an Assignment</string>
@@ -25,10 +28,17 @@
         <item>HCDD 340</item>
     </string-array>
 
-    <!-- Settings screen -->
+    <!-- Settings page -->
+    <string name="settings_header">Settings</string>
     <string name="change_name">Change name</string>
     <string name="class_settings">Class Settings</string>
     <string name="dark_mode">Dark Mode</string>
     <string name="about">About</string>
     <string name="back_button">Exit</string>
+
+    <!-- Change name page -->
+    <string name="change_name_header">Edit Name Settings</string>
+    <string name="change_name_field">Change name:</string>
+    <string name="change_name_text">New name</string>
+    <string name="change_name_save">Save Name</string>
 </resources>

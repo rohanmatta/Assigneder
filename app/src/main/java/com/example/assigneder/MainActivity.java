@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int menuId = item.getItemId();
 
-        if (menuId == R.id.menu_add_class) {
+        if (menuId == R.id.menu_add_assignment) {
             Intent aboutIntent = new Intent(this, AddAssignment.class);
             startActivity(aboutIntent);
             return true;

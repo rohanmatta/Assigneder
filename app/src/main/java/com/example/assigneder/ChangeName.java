@@ -1,48 +1,37 @@
 package com.example.assigneder;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
-public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
+public class ChangeName extends AppCompatActivity implements View.OnClickListener {
+
+    public static final String SHARED_PREF_NAME = "ASSIGNEDER";
+    public static final String NAME_KEY = "STUDENT_NAME";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.activity_change_name);
 
-        TextView changeName = findViewById(R.id.row_change_name);
-        changeName.setOnClickListener(this);
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREF_NAME, MODE_PRIVATE);
 
-        TextView classSettings = findViewById(R.id.row_class_settings);
-        classSettings.setOnClickListener(this);
-
-        TextView about = findViewById(R.id.row_about);
-        about.setOnClickListener(this);
-
-        Button backButton = findViewById(R.id.back_button);
-        backButton.setOnClickListener(this);
+        Button saveButton = findViewById(R.id.save_button);
     }
 
     @Override
     public void onClick(View v) {
-        int id = v.getId();
 
-        if(id == R.id.back_button){
-            finish();
-        }else if(id == R.id.row_change_name){
-            Intent aboutIntent = new Intent(this, ChangeName.class);
-            startActivity(aboutIntent);
-        }else if(id == R.id.row_class_settings){
-            finish();
-        } else if(id == R.id.row_about) {
-            finish();
-        }
     }
 
     @Override
