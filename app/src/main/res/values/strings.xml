@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Assigneder</string>
+    <string name="error_header">Uh ohhh...</string>
 
     <!-- Menus -->
     <string name="add_assignment_menu">Add Assignment</string>
@@ -41,4 +42,7 @@
     <string name="change_name_field">Change name:</string>
     <string name="change_name_text">New name</string>
     <string name="change_name_save">Save Name</string>
+
+    <string name="alert_box_empty_name">The name field cannot be empty</string>
+    <string name="alert_box_ok_button">OK!!</string>
 </resources>
