@@ -1,20 +1,43 @@
 package com.example.assigneder;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Switch;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private SharedPreferences sharedPreferences;
+    private static final String SHARED_PREF_NAME = "ASSIGNEDER";
+    private static final String DARK_MODE_KEY = "DARK_MODE";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
+        sharedPreferences = getSharedPreferences(SHARED_PREF_NAME, MODE_PRIVATE);
+
+        Switch darkModeSwitch = findViewById(R.id.switch_dark_mode);
+        boolean isDarkMode = sharedPreferences.getBoolean(DARK_MODE_KEY, false);
+        darkModeSwitch.setChecked(isDarkMode);
+
+        darkModeSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putBoolean(DARK_MODE_KEY, isChecked);
+            editor.apply();
+
+            recreate();
+        });
 
         TextView changeName = findViewById(R.id.row_change_name);
         changeName.setOnClickListener(this);
@@ -39,9 +62,19 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
             Intent aboutIntent = new Intent(this, ChangeName.class);
             startActivity(aboutIntent);
         }else if(id == R.id.row_class_settings){
-            finish();
+            Intent aboutIntent = new Intent(this, ClassSettings.class);
+            startActivity(aboutIntent);
         } else if(id == R.id.row_about) {
-            finish();
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle(R.string.app_name);
+            builder.setMessage(R.string.about_text);
+            builder.setNegativeButton(R.string.alert_box_ok_button, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    finish();
+                }
+            });
+            builder.show();
         }
     }
 

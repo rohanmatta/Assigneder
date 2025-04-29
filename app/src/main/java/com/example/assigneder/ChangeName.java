@@ -29,9 +29,15 @@ public class ChangeName extends AppCompatActivity implements View.OnClickListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_change_name);
-
         this.sharedPreferences = getSharedPreferences(SHARED_PREF_NAME, MODE_PRIVATE);
+        boolean isDarkMode = sharedPreferences.getBoolean("DARK_MODE", false);
+        if (isDarkMode) {
+            setTheme(R.style.Theme_Assigneder_Dark);
+        } else {
+            setTheme(R.style.Theme_Assigneder_Light);
+        }
+
+        setContentView(R.layout.activity_change_name);
 
         Button saveButton = findViewById(R.id.save_button);
         saveButton.setOnClickListener(this);

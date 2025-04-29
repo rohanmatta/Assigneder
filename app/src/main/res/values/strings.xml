@@ -7,32 +7,33 @@
     <string name="settings_menu">Settings</string>
     <string name="back_menu">Back</string>
 
+    <!-- Home Page -->
+    <string name="home_page_header_placeholder">Welcome!</string>
+
     <!-- Add assignment page -->
     <string name="assignment_header">Add an Assignment</string>
     <string name="title_field">Title:</string>
-    <string name="class_field">Class:</string>
+    <string name="class_field">Course:</string>
     <string name="due_field">Due Date:</string>
     <string name="description_field">Description:</string>
+    <string name="urgent_field">Urgent</string>
     <string name="month_field">MM</string>
     <string name="day_field">DD</string>
     <string name="year_field">YYYY</string>
 
     <string name="title_text">Title</string>
-    <string name="class_text">Class</string>
+    <string name="class_text">Course</string>
     <string name="description_text">Description</string>
 
     <string name="add_assignment_button_text">Add</string>
     <string name="cancel_button_text">Cancel</string>
 
-    <!-- Array of Classes to be added to -->
-    <string-array name="classes">
-        <item>HCDD 340</item>
-    </string-array>
+    <string name="alert_box_assignment_error">Some the fields entered cannot be registered (make sure the correct information is in the right fields)</string>
 
     <!-- Settings page -->
     <string name="settings_header">Settings</string>
     <string name="change_name">Change name</string>
-    <string name="class_settings">Class Settings</string>
+    <string name="class_settings">Course Settings</string>
     <string name="dark_mode">Dark Mode</string>
     <string name="about">About</string>
     <string name="back_button">Exit</string>
@@ -45,4 +46,13 @@
 
     <string name="alert_box_empty_name">The name field cannot be empty</string>
     <string name="alert_box_ok_button">OK!!</string>
+
+    <!-- Class settings page -->
+    <string name="add_class_button">Add Course</string>
+    <string name="class_name_field">Course name:</string>
+    <string name="class_name_text">name</string>
+    <string name="save_course_button">Save Course</string>
+
+    <!-- About -->
+    <string name="about_text">This is an app created by Michael Bischoff, Brett Cunningham, and Rohan Matta for their final assignment in HCDD 340</string>
 </resources>

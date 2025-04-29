@@ -1,9 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Assigneder" parent="Theme.AppCompat">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-    </style>
-
-    <style name="Theme.Assigneder" parent="Base.Theme.Assigneder" />
+<resources>
+    <style name="Theme.Assigneder.Light" parent="Theme.AppCompat.Light" />
+    <style name="Theme.Assigneder.Dark" parent="Theme.AppCompat" />
 </resources>

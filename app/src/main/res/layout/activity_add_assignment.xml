@@ -11,7 +11,7 @@
         android:id="@+id/add_assignment_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="130dp"
         android:text="@string/assignment_header"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,8 +22,8 @@
         android:id="@+id/title_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/title_field"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toStartOf="@+id/assignment_title"
@@ -82,7 +82,7 @@
         app:layout_constraintTop_toTopOf="@+id/class_text" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/description_field"
         android:layout_width="wrap_content"
         android:layout_height="96dp"
         android:ems="10"
@@ -147,5 +147,16 @@
         app:layout_constraintEnd_toStartOf="@+id/button_add_assignment"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/check_urgent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/urgent_field"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description_field" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
